@@ -31,6 +31,7 @@ export class SaisieComponent implements OnInit {
   }
 
   onSubmit(){
+    console.log(this.form);
     this.formValidated.emit(this.form);
   }
 

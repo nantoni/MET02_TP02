@@ -12,7 +12,7 @@
                 <div class="input-field col s6">
                     <label>Mot de passe</label>
                     <input type="password" name="pass" id="pass" />
-                    <span id="errorPass" class="helper-text">Les mots de passe de correspondent pas</span>
+                    <span >Les mots de passe de correspondent pas</span>
                 </div>
                 <div class="input-field col s6">
                     <label>Confirmation</label>
@@ -94,14 +94,15 @@
                 </div>
                 <!-- Email -->
                 <div class="input-field col s12">
-                    <input formControlName="email" id="email" type="email" class="validate">
+                    <input formControlName="email" id="email" type="email" class="validate" pattern="^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$">
                     <label for="email">Email</label>
+                    <span *ngIf="form.controls['email'].errors?.pattern">Cet email n'est pas valide</span>
                 </div>
                 <!-- Telephone -->
                 <div class="input-field col s12">
                     <label>Telephone</label>
-                    <input formControlName="tel" type="tel" name="tel" id="tel" />
-                    <span id="errorTel" class="helper-text">Ce numéro n'est pas correct</span>
+                    <input formControlName="tel" type="tel" name="tel" id="tel" pattern="^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$"/>
+                    <span *ngIf="form.controls['tel'].errors?.pattern" id="errorTel">Ce numéro n'est pas valide</span>
                 </div>
                 <!-- Adresse -->
                 <div class="input-field col s12">
@@ -111,8 +112,8 @@
                 <!-- Code Postal  -->
                 <div class="input-field col s6">
                     <label>Code Postal</label>
-                    <input formControlName="cp" type="text" name="cp" id="cp" />
-                    <span id="errorCp" class="helper-text">Ce code postal n'est pas correct</span>
+                    <input formControlName="cp" type="text" name="cp" id="cp" pattern="^[0-9]{5}$"/>
+                    <span *ngIf="form.controls['cp'].errors?.pattern">Ce code postal n'est pas valide</span>
                 </div>
                 <!-- Ville  -->
                 <div class="input-field col s6">
