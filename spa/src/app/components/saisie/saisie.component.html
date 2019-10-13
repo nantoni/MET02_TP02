@@ -1,0 +1,84 @@
+<div class="container">
+    <div class="card">
+        <div class="row">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()" id="compteForm" class="col s8 offset-s2">
+                <h2>Saisie compte client</h2>
+                <!-- Login -->
+                <div class="input-field col s12">
+                    <label>Login</label>
+                    <input formControlName="login" autofocus type="text" name="login" id="login" />
+                </div>
+                <!-- Password -->
+                <div class="input-field col s6">
+                    <label>Mot de passe</label>
+                    <input type="password" name="pass" id="pass" />
+                    <span id="errorPass" class="helper-text">Les mots de passe de correspondent pas</span>
+                </div>
+                <div class="input-field col s6">
+                    <label>Confirmation</label>
+                    <input type="password" name="passconfirm" id="passconfirm" />
+                </div>
+                <!-- Civilite -->
+                <div class="input-field col s12">
+                    <div>
+                        <label>
+                            <input name="groupCivilite" type="radio" />
+                            <span>Homme</span>
+                        </label>
+                        <label>
+                            <input name="groupCivilite" type="radio" />
+                            <span>Femme</span>
+                        </label>
+                        <label>
+                            <input name="groupCivilite" type="radio" />
+                            <span>Non-binaire</span>
+                        </label>
+                    </div>
+                </div>
+                <!-- Nom -->
+                <div class="input-field col s6">
+                    <label>Nom</label>
+                    <input type="text" name="nom" id="nom" />
+                </div>
+                <!-- Prenom -->
+                <div class="input-field col s6">
+                    <label>Prenom</label>
+                    <input type="text" name="prenom" id="prenom" />
+                </div>
+                <!-- Email -->
+                <div class="input-field col s12">
+                    <input id="email" type="email" class="validate">
+                    <label for="email">Email</label>
+                </div>
+                <!-- Telephone -->
+                <div class="input-field col s12">
+                    <label>Telephone</label>
+                    <input type="tel" name="tel" id="tel" 
+                    />
+                    <span id="errorTel" class="helper-text">Ce numéro n'est pas correct</span>
+                </div>
+                <!-- Adresse -->
+                <div class="input-field col s12">
+                    <label>Adresse</label>
+                    <input type="text" name="adresse" id="adresse" />
+                </div>
+                <!-- Code Postal  -->
+                <div class="input-field col s6">
+                    <label>Code Postal</label>
+                    <input type="text" name="cp" id="cp" />
+                    <span id="errorCp" class="helper-text">Ce code postal n'est pas correct</span>
+                </div>
+                <!-- Ville  -->
+                <div class="input-field col s6">
+                    <label>Ville</label>
+                    <input type="text" name="ville" id="ville" />
+                </div>
+                <!-- Submit -->
+                <div class="input_field col s12">
+                    <button class="btn waves-effect waves-light" type="submit" name="action">Envoyer</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
