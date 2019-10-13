@@ -14,7 +14,6 @@ export class AppComponent {
   data: FormGroup;
 
   onFormValidated(data: FormGroup){
-    alert("smbt");
     this.data = data;
     this.formValidated = true;
   }

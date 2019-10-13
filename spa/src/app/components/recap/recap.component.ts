@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-recap',
@@ -7,11 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RecapComponent implements OnInit {
 
-  @Input() data: FormData;
+  @Input() data: FormGroup;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.data);
   }
 
 }

@@ -15,6 +15,15 @@ export class SaisieComponent implements OnInit {
 
     this.form = formBuilder.group({
       login: '',
+      groupCivilite: '',
+      nom: '',
+      prenom: '',
+      pays: '',
+      email: '',
+      tel: '',
+      adresse: '',
+      cp: '',
+      ville: ''
     });
   }
 
